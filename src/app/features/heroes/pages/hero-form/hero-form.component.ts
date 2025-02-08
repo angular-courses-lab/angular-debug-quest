@@ -5,6 +5,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-hero-form',
   imports: [ReactiveFormsModule],
   templateUrl: './hero-form.component.html',
+  standalone: true
 })
 export class HeroFormComponent {
   heroForm: FormGroup = new FormGroup({

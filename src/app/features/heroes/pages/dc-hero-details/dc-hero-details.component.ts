@@ -7,6 +7,7 @@ import { AsyncPipe } from '@angular/common';
   selector: 'app-dc-hero-details',
   templateUrl: './dc-hero-details.component.html',
   imports: [HeroItemComponent, AsyncPipe],
+  standalone: true
 })
 export class DcHeroDetailsComponent {
   heroService = inject(HeroService);

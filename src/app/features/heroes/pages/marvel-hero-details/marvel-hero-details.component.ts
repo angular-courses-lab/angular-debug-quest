@@ -7,6 +7,7 @@ import { AsyncPipe } from '@angular/common';
   selector: 'app-marvel-hero-details',
   templateUrl: './marvel-hero-details.component.html',
   imports: [HeroItemComponent, AsyncPipe],
+  standalone: true
 })
 export class MarvelHeroDetailsComponent {
   heroService = inject(HeroService);

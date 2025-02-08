@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-marvel-hero-list',
   imports: [FormsModule, RouterLink],
   templateUrl: './marvel-hero-list.component.html',
+  standalone: true
 })
 export class MarvelHeroListComponent implements OnInit {
   heroes: HeroWithFavorite[] = [];

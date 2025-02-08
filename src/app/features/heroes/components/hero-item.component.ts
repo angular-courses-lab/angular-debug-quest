@@ -4,6 +4,7 @@ import { Hero } from '../models/hero.model';
 @Component({
   selector: 'app-hero-item',
   templateUrl: './hero-item.component.html',
+  standalone: true
 })
 export class HeroItemComponent {
   hero = input.required<Hero>();

@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-dc-hero-list',
   imports: [RouterLink],
   templateUrl: './dc-hero-list.component.html',
+  standalone: true
 })
 export class DCHeroListComponent implements OnInit {
   heroes: Hero[] = [];
