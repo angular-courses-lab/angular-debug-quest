@@ -9,12 +9,12 @@ import { SocksListComponent } from './features/socks/pages/socks-list/socks-list
 import { CartComponent } from './features/socks/pages/cart/cart.component';
 
 export const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: DCHeroListComponent },
   { path: 'dc-heroes', component: DCHeroListComponent },
   { path: 'marvel-heroes', component: MarvelHeroListComponent },
   { path: 'hero-form', component: HeroFormComponent },
-  { path: ':dcId', component: DcHeroDetailsComponent },
-  { path: ':marvelId', component: MarvelHeroDetailsComponent },
+  { path: 'dc-hero/:dcId', component: DcHeroDetailsComponent },
+  { path: 'marvel-hero/:marvelId', component: MarvelHeroDetailsComponent },
   { path: 'socks', component: SocksListComponent },
   { path: 'socks/cart', component: CartComponent },
 ];
