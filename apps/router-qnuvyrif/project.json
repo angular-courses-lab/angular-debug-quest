@@ -1,0 +1,81 @@
+{
+  "name": "router-qnuvyrif",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "apps/router-qnuvyrif/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "options": {
+        "outputPath": "dist/apps/router-qnuvyrif",
+        "index": "apps/router-qnuvyrif/src/index.html",
+        "browser": "apps/router-qnuvyrif/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/router-qnuvyrif/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/router-qnuvyrif/public"
+          }
+        ],
+        "styles": ["apps/router-qnuvyrif/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kB",
+              "maximumError": "1MB"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kB",
+              "maximumError": "8kB"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "router-qnuvyrif:build:production"
+        },
+        "development": {
+          "buildTarget": "router-qnuvyrif:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "polyfills": ["zone.js", "zone.js/testing"],
+        "tsConfig": "apps/router-qnuvyrif/tsconfig.spec.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/router-qnuvyrif/public"
+          }
+        ],
+        "styles": ["apps/router-qnuvyrif/src/styles.css"],
+        "scripts": []
+      }
+    }
+  }
+}
