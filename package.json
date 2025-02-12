@@ -9,9 +9,7 @@
     "test": "nx test",
     "start-server": "json-server --watch db.json",
     "server": "json-server --watch db.json",
-    "prepare": "husky install",
-    "postinstall": "cd schematics && npm install && npm run build",
-    "generate-app": "schematics ./schematics:app-generator --debug=false"
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
