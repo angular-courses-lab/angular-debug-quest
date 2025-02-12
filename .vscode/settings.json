@@ -3,5 +3,6 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.formatDocument": "always"
-  }
+  },
+  "eslint.validate": ["json"]
 }
