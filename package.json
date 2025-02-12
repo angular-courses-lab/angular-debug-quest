@@ -34,7 +34,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.1.5",
     "@angular-devkit/core": "^19.1.5",
-    "@angular-devkit/schematics": "^19.1.5",
+    "@angular-devkit/schematics": "^19.1.6",
     "@angular-devkit/schematics-cli": "^19.1.6",
     "@angular/cli": "^19.1.5",
     "@angular/compiler-cli": "^19.1.0",
