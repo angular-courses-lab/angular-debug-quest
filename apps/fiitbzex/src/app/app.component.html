@@ -1,0 +1,143 @@
+<div
+  class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="text-center text-3xl font-extrabold text-gray-900">
+      Create your account
+    </h2>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-2">
+        <div>
+          <label
+            for="firstName"
+            class="block text-sm font-medium text-gray-700">
+            First Name
+          </label>
+          <div class="mt-1">
+            <input
+              id="firstName"
+              type="text"
+              formControlName="firstName"
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          <p
+            class="mt-2 text-sm text-red-600 transition-opacity duration-200"
+            [class.opacity-0]="
+              !(
+                signupForm.controls.firstName.touched &&
+                signupForm.controls.firstName.invalid
+              )
+            ">
+            First name is required and must be at least 2 characters
+          </p>
+        </div>
+
+        <div>
+          <label for="lastName" class="block text-sm font-medium text-gray-700">
+            Last Name
+          </label>
+          <div class="mt-1">
+            <input
+              id="lastName"
+              type="text"
+              formControlName="lastName"
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          <p
+            class="mt-2 text-sm text-red-600 transition-opacity duration-200"
+            [class.opacity-0]="
+              !(
+                signupForm.controls.lastName.touched &&
+                signupForm.controls.lastName.invalid
+              )
+            ">
+            Last name is required and must be at least 2 characters
+          </p>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">
+            Email address
+          </label>
+          <div class="mt-1">
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          <p
+            class="mt-2 text-sm text-red-600 transition-opacity duration-200"
+            [class.opacity-0]="
+              !(
+                signupForm.controls.email.touched &&
+                signupForm.controls.email.invalid
+              )
+            ">
+            Please enter a valid email address
+          </p>
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">
+            Password
+          </label>
+          <div class="mt-1">
+            <input
+              id="password"
+              type="password"
+              formControlName="password"
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          <p
+            class="mt-2 text-sm text-red-600 transition-opacity duration-200"
+            [class.opacity-0]="
+              !(
+                signupForm.controls.password.touched &&
+                signupForm.controls.password.invalid
+              )
+            ">
+            Password must be at least 8 characters long
+          </p>
+        </div>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="acceptTerms"
+            type="checkbox"
+            formControlName="acceptTerms"
+            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" />
+          <label for="acceptTerms" class="ml-2 block text-sm text-gray-900">
+            I agree to the terms and conditions
+            <span class="text-red-600">*</span>
+          </label>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-indigo-300 disabled:cursor-not-allowed">
+            Sign up
+          </button>
+
+          <div class="mt-2 text-center text-sm">
+            <p
+              id="form-status-valid"
+              class="text-green-600 transition-opacity duration-200"
+              [class.opacity-0]="!signupForm.valid">
+              Form is valid and ready to submit!
+            </p>
+            <p
+              id="form-status-invalid"
+              class="text-red-600 transition-opacity duration-200"
+              [class.opacity-0]="signupForm.valid">
+              Please fill in all required fields correctly
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
