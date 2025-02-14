@@ -1,0 +1,25 @@
+<div class="min-h-screen">
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0">
+          <h1 class="text-xl font-bold">Awesome App</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a routerLink="/profile" class="text-gray-700 hover:text-gray-900"
+            >Profile</a
+          >
+          <button
+            (click)="signOut()"
+            class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <router-outlet />
+  </main>
+</div>
