@@ -6,5 +6,5 @@ test('has title', async ({ page }) => {
   const signInButton = page.locator('button:has-text("Sign In")');
   await expect(signInButton).toBeVisible();
 
-  await page.screenshot({ path: 'screenshots/approval-screenshot.png' });
+  await page.screenshot({ path: 'screenshots/bug-screenshot.png' });
 });
