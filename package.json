@@ -21,7 +21,7 @@
     "@angular/forms": "^19.1.0",
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
-    "@angular/router": "^19.1.0",
+    "@angular/router": "^19.1.6",
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
